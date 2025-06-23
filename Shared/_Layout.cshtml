@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tocha Project</title>
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/tuyendung.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/tuyendung.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/vechungtoi.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tocha</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TuyenDung">Tuyển Dụng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="VeChungToi">Về Chúng Tôi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    
+    <footer class="site-footer" style="background-image: url('../assets/banner2.png');">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <img src="~/assets/logo_tocha.svg" alt="Tocha Logo" class="footer-logo">
+            </div>
+    
+            <div class="footer-column">
+                <h4 class="footer-title">CÔNG TY TNHH TOCHA VIỆT NAM</h4>
+                <ul class="footer-info">
+                    <li>Trụ sở chính: Tầng 2 tòa nhà T10, Times City, 458 Minh Khai, Phường Vĩnh Tuy, Quận Hai Bà Trưng, TP.Hà Nội.</li>
+                    <li>Chi nhánh miền Nam: Lầu 2, Số 373 - 375, Đường Nguyễn Trọng Tuyển, Phường 2, Quận Tân Bình, TP.Hồ Chí Minh.</li>
+                    <li>1900.12.34.56</li>
+                    <li>info@tochatea.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="app-links">
+                    <a href="#"><img src="~/assets/google play.svg" alt="Google Play"></a>
+                </div>
+                 <a href="#"><img src="~/assets/tickxanh.svg" alt="Đã thông báo" class="bct-logo"></a>
+            </div>
+    
+            <div class="footer-column footer-links">
+                <div>
+                    <h4 class="footer-title">VỀ CHÚNG TÔI</h4>
+                    <ul>
+                        <li><a asp-area="" asp-controller="Home" asp-action="VeChungToi">Giới thiệu về Tocha</a></li>
+                        <li><a href="#">Nhượng quyền</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">CHÍNH SÁCH</h4>
+                    <ul>
+                        <li><a href="#">Chính sách thành viên</a></li>
+                        <li><a href="#">Bảo mật thông tin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Tocha - Thương hiệu trà sữa tiên phong sử dụng nông sản Việt Nam</p>
+                <p>Copyrights © 2024 by TochaTea. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
